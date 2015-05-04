@@ -4,6 +4,7 @@
 	Actions = (
 	);
 	Outlets = (
+	    textView
 	);
 	Super = NSDocument;
     };
