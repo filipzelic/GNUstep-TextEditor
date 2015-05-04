@@ -1,0 +1,21 @@
+{
+    ApplicationDescription = "Editor";
+    ApplicationIcon = "";
+    ApplicationName = Editor;
+    ApplicationRelease = 0.1;
+    Authors = "Filip Zelic";
+    Copyright = "Copyright (C) 2015 by Filip Zelic";
+    CopyrightDescription = "Released under GNU";
+    FullVersionID = 0.1;
+    URL = "";
+    NSTypes = (
+        {
+             NSName = "TextDocument";
+             NSHumanReadableName = "Text Document";
+             NSUnixExtensions = ("txt");
+             NSDOSExtensions = ("txt");
+             NSRole = Editor;
+             NSDocumentClass = Document;
+        }
+    );
+}
