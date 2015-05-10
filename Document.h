@@ -4,14 +4,14 @@
 #include <AppKit/NSDocument.h>
 
 @class NSDocument; 
-NSString * GSTextDocumentType = @"GSTextDocumentType";
+NSString * FZTextDocumentType = @"FZTextDocumentType";
 @interface Document : NSDocument
 {
-	@protected
+  @protected
     id textView;
     NSString* fileContents;
 }
-- (BOOL) loadDataRepresentation:(NSData*)representation ofType:(NSString*)type;
-- (NSData*) dataRepresentationOfType: (NSString*)type; 
+- (BOOL) readFromData:(NSData*) representation ofType:(NSString*)type error: (NSError**)error;
+- (NSData*) dataOfType:(NSString*)type error:(NSError**)error;
 - (NSString*) windowNibName;
 @end

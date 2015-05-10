@@ -4,10 +4,14 @@
 #include "Document.h"
 
 @implementation Document
-- (BOOL) loadDataRepresentation:(NSData*) representation ofType:(NSString*)type
+- (BOOL) readFromData:(NSData*) representation ofType:(NSString*)type error: (NSError**)error
 {
-   if (![type isEqual:GSTextDocumentType])
+   NSLog(@"reading from type %@", type);
+   if (![type isEqualToString:FZTextDocumentType])
+     {
+       NSLog(@"Wrong document type; should be %@", FZTextDocumentType);
        return NO;
+     }
 
    if (self->fileContents) RELEASE(self->fileContents); 
 
@@ -23,9 +27,9 @@
    return YES;
 }
 
-- (NSData*) dataRepresentationOfType:(NSString*)type
+- (NSData*) dataOfType:(NSString*)type error:(NSError**)error
 {
-    if (![type isEqual:GSTextDocumentType])
+    if (![type isEqual:FZTextDocumentType])
         return nil; 
 
     NSData * stringData =  [[textView string] dataUsingEncoding:NSASCIIStringEncoding];  
