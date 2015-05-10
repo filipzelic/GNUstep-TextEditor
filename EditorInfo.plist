@@ -10,7 +10,7 @@
     URL = "";
     NSTypes = (
         {
-             NSName = "TextDocument";
+             NSName = "FZTextDocumentType";
              NSHumanReadableName = "Text Document";
              NSUnixExtensions = ("txt");
              NSDOSExtensions = ("txt");
