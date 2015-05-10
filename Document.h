@@ -11,7 +11,7 @@ NSString * FZTextDocumentType = @"FZTextDocumentType";
     id textView;
     NSString* fileContents;
 }
-- (NSData*) dataOfType:(NSString*)type error:(NSError**)error;
 - (BOOL) readFromData:(NSData*) representation ofType:(NSString*)type error: (NSError**)error;
+- (NSData*) dataOfType:(NSString*)type error:(NSError**)error;
 - (NSString*) windowNibName;
 @end
